@@ -114,7 +114,7 @@ class StudentController extends Controller
                 \Storage::delete('public/'.$student->photo);
             }
             $image_name = $request->file('photo')->store('images','public');
-            $student->photo = $image_nam;
+            $student->photo = $image_name;
 
             $kelas = new Kelas;
             $kelas->id = $request->Kelas;
