@@ -54,6 +54,15 @@
                             <img width="150px" src="{{asset('storage/'.$student->photo)}}">
                         </div>
 
+                        @foreach($student->courses as $cs)
+                        <div class="form-group">
+                        <tr>
+                        <label for="nilai">Nilai</label>
+                            <td>{{ $cs->course_name }}</td>
+                            <input type="text" class="form-control" required="required" name="nilai" value="{{ $cs->pivot->nilai }}"></br>
+                        </div>
+                        @endforeach
+
                         <button type="submit" name="edit" class="btn btn-primary float-right">Save Changes</button>
                     </form>
                 </div>
