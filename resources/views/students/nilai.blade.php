@@ -28,7 +28,6 @@
                         <thead>
                             <tr>
                                 <th>Mata kuliah</th>
-                                <th>SKS</th>
                                 <th>Semester</th>
                                 <th>Nilai</th>
                             </tr>
@@ -37,7 +36,6 @@
                             @foreach($student->courses as $cs)
                             <tr>
                                 <td>{{ $cs->course_name }}</td>
-                                <td>{{ $cs->sks }}</td>
                                 <td>{{ $cs->semester }}</td>
                                 <td>{{ $cs->pivot->nilai }} </td>
                             </tr>
@@ -45,6 +43,8 @@
                         </tbody>
                     </table>
                     <a href="/students/{{$student->id}}/report" class="btn btn-primary" target="_blank">PRINT PDF</a>
+                    <a href="/students/{{$student->id}}/editnilai" class="btn btn-primary">EDIT NILAI</a> 
+                    <br><br>
 
                 </div>
             </div>

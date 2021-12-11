@@ -54,6 +54,8 @@ class StudentController extends Controller
 
         $kelas = new Kelas;
         $kelas->id = $request->Kelas;
+
+        $student->nilai = $request->nilai;
         
         $student->kelas()->associate($kelas);
         $student->save();
@@ -95,6 +97,13 @@ class StudentController extends Controller
         return view('students.edit',['student'=>$student, 'kelas'=>$kelas]);
     }
 
+    public function editNilai($id)
+    {
+        $student = Student::find($id);
+        $kelas = Kelas::all();
+        return view('students.editnilai',['student'=>$student, 'kelas'=>$kelas]);
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -112,9 +121,9 @@ class StudentController extends Controller
 
             if($student->photo && file_exists(storage_path('app/public/$student->photo'))){
                 \Storage::delete('public/'.$student->photo);
+                $image_name = $request->file('photo')->store('images','public');
+                $student->photo = $image_name;
             }
-            $image_name = $request->file('photo')->store('images','public');
-            $student->photo = $image_name;
 
             $kelas = new Kelas;
             $kelas->id = $request->Kelas;

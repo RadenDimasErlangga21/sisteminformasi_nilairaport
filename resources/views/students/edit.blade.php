@@ -18,6 +18,7 @@
                         {{csrf_field()}}
                         @method('PUT')
                         <input type="hidden" name="id" value="{{$student->id}}"></br>
+                        
                         <div class="form-group">
                             <label for="nim">NIM</label>
                             <input type="text" class="form-control" required="required" name="nim" value="{{$student->nim}}"></br>
