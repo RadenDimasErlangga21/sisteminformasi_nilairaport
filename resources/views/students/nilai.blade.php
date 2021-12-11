@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
     <div class="col-md-8">
         <div class="card">
-            <div class="card-header" align="center"><b>{{ __('JURUSAN TEKNOLOGI INFORMASI POLITEKNIK NEGERI MALANG') }}</b></div>
+            <div class="card-header" align="center"><b>{{ __('SMK TEKNIK RADEN MALANG') }}</b></div>
                 <div class="card-body">
                     <center>
                         <b>{{ __('KARTU HASIL STUDI (KHS)') }}</b>
