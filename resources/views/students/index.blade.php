@@ -27,11 +27,11 @@
                     <table class="table table-responsive table-striped">
                         <thead>
                             <tr>
-                                <th>NIM</th>
-                                <th>Name</th>
-                                <th>Class</th>
-                                <th>Department</th>
-                                <th>Action</th> 
+                                <th>NIS</th>
+                                <th>Nama</th>
+                                <th>Kelas</th>
+                                <th>Jurusan</th>
+                                <th>Opsi</th> 
                             </tr>
                         </thead>
                         <tbody>

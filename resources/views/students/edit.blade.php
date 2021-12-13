@@ -20,16 +20,16 @@
                         <input type="hidden" name="id" value="{{$student->id}}"></br>
                         
                         <div class="form-group">
-                            <label for="nim">NIM</label>
+                            <label for="nim">NIS</label>
                             <input type="text" class="form-control" required="required" name="nim" value="{{$student->nim}}"></br>
                         </div>
                         <div class="form-group">
-                            <label for="name">Name</label>
+                            <label for="name">Nama</label>
                             <input type="text" class="form-control" required="required" name="name" value="{{$student->name}}"></br>
                         </div>
 
                         <div class="form-group">
-                            <label for="Kelas">Class</label>
+                            <label for="Kelas">Kelas</label>
                             <select class="form-control" name="Kelas">
                             @foreach($kelas as $class)
                             <option value="{{$class->id}}" {{ $student->class_id == $class->id ? "selected":"" }}>
@@ -40,16 +40,16 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="department">Department</label>
+                            <label for="department">Jurusan</label>
                             <input type="text" class="form-control" required="required" name="department" value="{{$student->department}}"></br>
                         </div>
                         <div class="form-group">
-                            <label for="phone_number">Phone Number</label>
+                            <label for="phone_number">Nomor HP</label>
                             <input type="text" class="form-control" required="required" name="phone_number" value="{{$student->phone_number}}"></br>
                         </div>
 
                         <div class="form-group">
-                            <label for="photo">Feature Image</label>
+                            <label for="photo">Foto Siswa</label>
                             <input type="file" class="form-control" required="required" name="photo" value="{{$student->photo}}"></br>
                             <img width="150px" src="{{asset('storage/'.$student->photo)}}">
                         </div>

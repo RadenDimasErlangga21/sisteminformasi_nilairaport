@@ -36,7 +36,7 @@
                         </div>
                         @endforeach
 
-                        <button type="submit" name="edit" class="btn btn-primary float-right">Save Changes</button>
+                        <button type="submit" name="editNilai" class="btn btn-primary float-right">Save Changes</button>
                     </form>
                 </div>
             </div>

@@ -28,7 +28,7 @@
                         <tr><th>Phone Number</th><th>:</th><td>{{$student->phone_number}}</td></tr>
                         </table>
 
-                        <a href="/students" class="btn btn-warning">back to CRUD</a>
+                        <a href="/students" class="btn btn-warning">KEMBALI KE CRUD</a>
                         </div>
                     </form>
                 </div>

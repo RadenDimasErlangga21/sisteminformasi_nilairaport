@@ -100,8 +100,7 @@ class StudentController extends Controller
     public function editNilai($id)
     {
         $student = Student::find($id);
-        $kelas = Kelas::all();
-        return view('students.editnilai',['student'=>$student, 'kelas'=>$kelas]);
+        return view('students.editnilai',['student'=>$student]);
     }
 
     /**
