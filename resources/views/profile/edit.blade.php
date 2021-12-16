@@ -15,8 +15,7 @@
                     @endif
 
                     <form action="/profile/{{$user->id}}" method="post">
-                        {{csrf_field()}}
-                        @method('PUT')
+                        {{csrf_field()}} @method('PUT')
                         <input type="hidden" name="id" value="{{$user->id}}"></br>
                         <div class="form-group">
                             <label for="username">Username</label>
