@@ -22,25 +22,20 @@ class ProfileController extends Controller
     	return view('profile.index', compact('user'));
     }
 
-    public function update(Request $request)
+	public function edit($id)
     {
-    	 $this->validate($request, [
-            'password'  =>'confirmed',
-        ]);
+        $user = User::find($id);
+        return view('profile.edit',['user'=>$user]);
+    }
 
-    	$user = User::where('id', Auth::user()->id)->first();
-    	$user->name = $request->name;
+    public function update(Request $request, $id)
+    {
+        $user = User::find($id);
         $user->username = $request->username;
-    	$user->email = $request->email;
-
-    	if(!empty($request->password))
-    	{
-    		$user->password = Hash::make($request->password);
-    	}
-    	
-    	$user->update();
-
-    	Alert::success('User Sukses diupdate', 'Success');
-    	return redirect('profile');
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
+        $user->save();
+        return redirect()->route('profile.index');
     }
 }

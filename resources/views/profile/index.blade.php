@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
     <div class="col-md-8">
         <div class="card">
-            <div class="card-header">{{ __('Edit Profile User : ') }} {{ $user->name }}</div>
+            <div class="card-header">{{ __('Profile User : ') }} {{ $user->name }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,31 +14,13 @@
                     </div>
                     @endif
 
-                    <form action="/profile/{{$user->id}}" method="post">
-                        {{csrf_field()}}
-                        @method('PUT')
-                        <input type="hidden" name="id" value="{{$user->id}}"></br>
-                        <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" class="form-control" required="required" name="username" value="{{$user->username}}"></br>
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" required="required" name="name" value="{{$user->name}}"></br>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="text" class="form-control" required="required" name="email" value="{{$user->email}}"></br>
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="text" class="form-control" required="required" name="password" value="{{$user->password}}"></br>
-                        </div>
-                        <button type="submit" name="update" class="btn btn-primary float-right">Save Changes</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+                    {{ __('You are logged in!') }}
+                    <table class="table table-responsive">
+                        <tr><th>Username</th><th>:</th><td>{{ $user->username }}</td></tr>
+                        <tr><th>Name</th><th>:</th><td>{{ $user->name }}</td></tr>
+                        <tr><th>Email</th><th>:</th><td>{{ $user->email }}</td></tr>
+                        </table>
+
+                        <form action="/profile/{{$user->id}}" method="post">
+                        <a href="/profile/{{$user->id}}/edit" class="btn btn-warning">Edit</a>
 @endsection

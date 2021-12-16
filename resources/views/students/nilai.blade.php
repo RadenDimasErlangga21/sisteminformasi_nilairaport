@@ -43,7 +43,7 @@
                         </tbody>
                     </table>
                     <a href="/students/{{$student->id}}/report" class="btn btn-primary" target="_blank">PRINT PDF</a>
-                    <a href="/students/{{$student->id}}/editnilai" class="btn btn-primary">EDIT NILAI</a> 
+                    <a href="/students/editnilai" class="btn btn-primary">EDIT NILAI</a> 
                     <a href="/students" class="btn btn-warning">KEMBALI KE CRUD</a>
                     <br><br>
 

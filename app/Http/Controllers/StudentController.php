@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Student;
+use App\Models\Course;
 use App\Models\Kelas;
+use App\Models\course_student;
 use Illuminate\Support\Facades\Gate;
 use PDF;
 
@@ -52,10 +54,11 @@ class StudentController extends Controller
         $student->phone_number = $request->phone_number;
         $student->photo = $image_name;
 
+        $cs = new course_student;
+        $cs-> student_id = $request->nilai;
+        
         $kelas = new Kelas;
         $kelas->id = $request->Kelas;
-
-        $student->nilai = $request->nilai;
         
         $student->kelas()->associate($kelas);
         $student->save();
@@ -97,12 +100,6 @@ class StudentController extends Controller
         return view('students.edit',['student'=>$student, 'kelas'=>$kelas]);
     }
 
-    public function editNilai($id)
-    {
-        $student = Student::find($id);
-        return view('students.editnilai',['student'=>$student]);
-    }
-
     /**
      * Update the specified resource in storage.
      *
@@ -118,11 +115,15 @@ class StudentController extends Controller
             $student->department = $request->department;
             $student->phone_number = $request->phone_number;
 
+
             if($student->photo && file_exists(storage_path('app/public/$student->photo'))){
                 \Storage::delete('public/'.$student->photo);
                 $image_name = $request->file('photo')->store('images','public');
                 $student->photo = $image_name;
             }
+
+            $cs = new course_student;
+            $cs-> student_id = $request->nilai;
 
             $kelas = new Kelas;
             $kelas->id = $request->Kelas;

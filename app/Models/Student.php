@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
     //use HasFactory;
-    protected $fillable = ['nim','name','class', 'department', 'phone_number'];
+    protected $fillable = ['nim','name','class', 'department', 'phone_number', 'nilai'];
 
     public function kelas(){
         return $this->belongsTo(Kelas::class, 'class_id');
