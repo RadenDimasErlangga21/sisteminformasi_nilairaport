@@ -3,7 +3,7 @@
         <title>Membuat Laporan PDF Dengan DOMPDF Laravel</title> 
     </head> 
     <body> 
-        <style type="text/css"> table tr td, table tr th{ font-size: 9pt; } </style> 
+        <style type="text/css"> table tr td, table tr th{ font-size: 12pt; } </style> 
         <div class="card-header" align="center"><b>{{ __('JURUSAN TEKNOLOGI INFORMASI POLITEKNIK NEGERI MALANG') }}</b></div>
 
         <div class="card-body">
