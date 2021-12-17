@@ -157,5 +157,14 @@ class StudentController extends Controller
         $student = Student::find($id);
         $pdf = PDF::loadview('students.report',['student'=>$student]);
         return $pdf->stream();
+
+    }
+    public function __construct()
+    {
+        //$this->middleware('auth');
+        $this->middleware(function($request, $next){
+            if(Gate::allows('manage-student')) return $next($request);
+            abort(403,'Anda bukan admin, anda tidak memiliki akses');
+        });
     }
 }
