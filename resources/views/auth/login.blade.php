@@ -8,10 +8,9 @@
           <div class="container">
               <div class="row justify-content-center">
                   <div class="col-lg-5 text-center mx-auto">
-                      <h1 class="text-white mb-2 mt-5">{{ __('Welcome!') }}</h1>
+                      <h1 class="text-white mb-2 mt-5">{{ __('Selamat Datang!') }}</h1>
                       <p class="text-lead text-white">
-                          {{ __('Use these awesome forms to login or create new account in your
-                          project for free.') }}
+                          {{ __('di sistem informasi nilai raport') }}
                       </p>
                   </div>
               </div>

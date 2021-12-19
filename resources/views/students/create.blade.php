@@ -50,6 +50,26 @@
                             <input type="file" class="form-control" required="required" name="photo"></br>
                         <div>
 
+                        <div class="form-group">
+                            <label for="Pemrograman_Berbasis_Objek">nilai Pemrograman Berbasis Objek</label>
+                            <input type="text" class="form-control" required="required" name="Pemrograman_Berbasis_Objek"></br>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Pemrograman_Web_Lanjut">nilai Pemrograman Web Lanjut</label>
+                            <input type="text" class="form-control" required="required" name="Pemrograman_Web_Lanjut"></br>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Basis_Data_Lanjut">nilai Basis Data Lanjut</label>
+                            <input type="text" class="form-control" required="required" name="Basis_Data_Lanjut"></br>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Praktikum_Basis_Data_Lanjut">nilai Praktikum Basis Data Lanjut</label>
+                            <input type="text" class="form-control" required="required" name="Praktikum_Basis_Data_Lanjut"></br>
+                        </div>
+
                         <button type="submit" name="add" class="btn btn-primary float-right">Add Data</button>
                     </form>
                 </div>

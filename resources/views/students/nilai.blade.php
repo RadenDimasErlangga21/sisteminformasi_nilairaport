@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appedit')
 
 @section('content')
 <div class="container">
@@ -33,13 +33,31 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($student->courses as $cs)
                             <tr>
-                                <td>{{ $cs->course_name }}</td>
-                                <td>{{ $cs->semester }}</td>
-                                <td>{{ $cs->pivot->nilai }} </td>
+                            <td>Pemrograman berbasis objek</td>
+                            <td> 3</td>
+                            <td>{{$student->Pemrograman_Berbasis_Objek}}</td> 
                             </tr>
-                            @endforeach
+
+                            <tr>
+                            <td>Pemrograman Web Lanjut</td>
+                            <td> 3 </td>
+                            <td>{{$student->Pemrograman_Web_Lanjut}}</td>
+                            </tr>
+
+                            <tr>
+                            <td>Basis Data Lanjut</td>
+                            <td> 3 </td>
+                            <td>{{$student->Basis_Data_Lanjut}}</td>
+                            </tr>
+
+                            
+                            <tr>
+                            <td>Praktikum Basis Data Lanjut</td>
+                            <td> 3 </td>
+                            <td>{{$student->Praktikum_Basis_Data_Lanjut}}</td>
+                            </tr>
+
                         </tbody>
                     </table>
                     <a href="/students/{{$student->id}}/report" class="btn btn-primary" target="_blank">PRINT PDF</a>

@@ -23,6 +23,12 @@ class StudentController extends Controller
         return view('students.index',['student'=>$students]);
     }
 
+    public function datasiswa()
+    {
+        $students = Student::with('kelas')->get();
+        return view('students.datasiswa',['student'=>$students]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -53,9 +59,10 @@ class StudentController extends Controller
         $student->department = $request->department;
         $student->phone_number = $request->phone_number;
         $student->photo = $image_name;
-
-        $cs = new course_student;
-        $cs-> student_id = $request->nilai;
+        $student->Pemrograman_Berbasis_Objek = $request->Pemrograman_Berbasis_Objek;
+        $student->Pemrograman_Web_Lanjut = $request->Pemrograman_Web_Lanjut;
+        $student->Basis_Data_Lanjut = $request->Basis_Data_Lanjut;
+        $student->Praktikum_Basis_Data_Lanjut = $request->Praktikum_Basis_Data_Lanjut;
         
         $kelas = new Kelas;
         $kelas->id = $request->Kelas;
@@ -122,8 +129,10 @@ class StudentController extends Controller
                 $student->photo = $image_name;
             }
 
-            $cs = new course_student;
-            $cs-> student_id = $request->nilai;
+            $student->Pemrograman_Berbasis_Objek = $request->Pemrograman_Berbasis_Objek;
+            $student->Pemrograman_Web_Lanjut = $request->Pemrograman_Web_Lanjut;
+            $student->Basis_Data_Lanjut = $request->Basis_Data_Lanjut;
+            $student->Praktikum_Basis_Data_Lanjut = $request->Praktikum_Basis_Data_Lanjut;
 
             $kelas = new Kelas;
             $kelas->id = $request->Kelas;

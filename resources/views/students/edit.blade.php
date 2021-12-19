@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.appedit')
 
 @section('content')
 <div class="container">
@@ -52,6 +52,7 @@
                             <img width="150px" src="{{asset('storage/'.$student->photo)}}">
                         </div>
 
+                        <!--
                         @foreach($student->courses as $cs)
                         <div class="form-group">
                         <tr>
@@ -60,7 +61,32 @@
                             <input type="text" class="form-control" required="required" name="nilai" value="{{ $cs->pivot->nilai }}"></br>
                         </div>
                         @endforeach
+                        -->
+                        
+                        <div class="form-group">
+                            <label for="Pemrograman_Berbasis_Objek">nilai Pemrograman Berbasis Objek</label>
+                            <input type="text" class="form-control" required="required" 
+                            name="Pemrograman_Berbasis_Objek" value="{{$student->Pemrograman_Berbasis_Objek}}"></br>
+                        </div>
 
+                        <div class="form-group">
+                            <label for="Pemrograman_Web_Lanjut">nilai Pemrograman Web Lanjut</label>
+                            <input type="text" class="form-control" 
+                            required="required" name="Pemrograman_Web_Lanjut" value="{{$student->Pemrograman_Web_Lanjut}}"></br>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Basis_Data_Lanjut">nilai Basis Data Lanjut</label>
+                            <input type="text" class="form-control" required="required" 
+                            name="Basis_Data_Lanjut" value="{{$student->Basis_Data_Lanjut}}"></br>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Praktikum_Basis_Data_Lanjut">nilai Praktikum Basis Data Lanjut</label>
+                            <input type="text" class="form-control" required="required" 
+                            name="Praktikum_Basis_Data_Lanjut" value="{{$student->Praktikum_Basis_Data_Lanjut}}"></br>
+                        </div>
+                        
                         <button type="submit" name="edit" class="btn btn-primary float-right">Save Changes</button>
                     </form>
                 </div>
