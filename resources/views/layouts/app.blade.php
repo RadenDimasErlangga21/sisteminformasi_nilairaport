@@ -67,17 +67,9 @@
                                 </li>
                             @endif
 
-                            @can('manage-student')
                             <li class="nav-item">
-                                    <a class="nav-link" href="students">{{ __('CRUD') }}</a>
+                                    <a class="nav-link" href="students">{{ __('DATA SISWA') }}</a>
                             </li>
-                            @endcan
-
-                            @can('view-student')
-                            <li class="nav-item">
-                                    <a class="nav-link" href="/students/datasiswa">{{ __('DATA SISWA') }}</a>
-                            </li>
-                            @endcan
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

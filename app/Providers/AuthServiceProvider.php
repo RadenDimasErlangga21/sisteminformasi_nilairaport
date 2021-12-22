@@ -6,12 +6,8 @@ use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvid
 use Illuminate\Support\Facades\Gate;
 
 Gate::define('manage-student', function($user){
-   return $user->role == "admin";
+ return $user->role == "admin";
 });
-
-Gate::define('view-student', function($user){
-    return $user->role == "user";
- });
 
 class AuthServiceProvider extends ServiceProvider
 {

@@ -23,12 +23,6 @@ class StudentController extends Controller
         return view('students.index',['student'=>$students]);
     }
 
-    public function datasiswa()
-    {
-        $students = Student::with('kelas')->get();
-        return view('students.datasiswa',['student'=>$students]);
-    }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -121,18 +115,16 @@ class StudentController extends Controller
             $student->name = $request->name;
             $student->department = $request->department;
             $student->phone_number = $request->phone_number;
-
-
-            if($student->photo && file_exists(storage_path('app/public/$student->photo'))){
-                \Storage::delete('public/'.$student->photo);
-                $image_name = $request->file('photo')->store('images','public');
-                $student->photo = $image_name;
-            }
-
             $student->Pemrograman_Berbasis_Objek = $request->Pemrograman_Berbasis_Objek;
             $student->Pemrograman_Web_Lanjut = $request->Pemrograman_Web_Lanjut;
             $student->Basis_Data_Lanjut = $request->Basis_Data_Lanjut;
             $student->Praktikum_Basis_Data_Lanjut = $request->Praktikum_Basis_Data_Lanjut;
+
+            if($student->photo && file_exists(storage_path('app/public/$student->photo'))){
+                \Storage::delete('public/'.$student->photo);
+            }
+            $image_name = $request->file('photo')->store('images','public');
+            $student->photo = $image_name;
 
             $kelas = new Kelas;
             $kelas->id = $request->Kelas;
@@ -168,6 +160,7 @@ class StudentController extends Controller
         return $pdf->stream();
 
     }
+    
     public function __construct()
     {
         //$this->middleware('auth');
