@@ -14,13 +14,18 @@
                         </div>
                     @endif
 
-                    {{ __('Selamat Datang') }}
-                    <table class="table table-responsive">
-                        <tr><th>Username</th><th>:</th><td>{{ $user->username }}</td></tr>
-                        <tr><th>Name</th><th>:</th><td>{{ $user->name }}</td></tr>
-                        <tr><th>Email</th><th>:</th><td>{{ $user->email }}</td></tr>
-                        <tr><th>Role</th><th>:</th><td>{{ $user->role }}</td></tr>
-                    </table>
+
+                    <img src="../assets/img/ss1.jpg" style="width:787px;height:390px;">
+
+                    <h3 align="justify"> selamat datang di sistem informasi nilai raport </h3>
+                    <p align="justify">
+                    Studi Kasus Sistem Informasi Nilai Raport ini dibuat sebagai proyek tugas akhir kelas 2E jurusan teknologi informasi, 
+                    prodi D-III Manajemen Informatika. Pembuatan tugas ini menggunakan referensi tugas-tugas kuliah dan mencoba untuk 
+                    eksplorasi lebih lanjut dari tugas-tugas yang diberikan selama perkuliahan dalam mata kuliah pemrograman web lanjut, 
+                    yang dimana hal ini bertujuan untuk menjadi bahan penelitian mahasiswa mengenai praktikum Laravel, sehingga mahasiswa 
+                    dapat membuat sebuah situs Laravel yang berfungsi serta dapat mengatasi masalah error yang terjadi pada pembuatan 
+                    proyek Sistem Informasi Nilai Raport ini.
+                    </p>
                 </div>
             </div>
         </div>

@@ -18,16 +18,16 @@
                     @endif
 
                     <div class="card-body">
-                        Name : {{ $student->name }} <br> 
-                        NIM : {{ $student->nim }} <br> 
-                        Class : {{ $student->kelas->class_name }} <br>
-                        Department : {{ $student->department }} <br>
+                        Nama : {{ $student->name }} <br> 
+                        NIS : {{ $student->nim }} <br> 
+                        Kelas : {{ $student->kelas->class_name }} <br>
+                        Jurusan : {{ $student->department }} <br>
                     </div>
 
                     <table class="table table-responsive table-striped">
                         <thead>
                             <tr>
-                                <th>Materi</th>
+                                <th>Mata Pelajaran</th>
                                 <th>Semester</th>
                                 <th>Nilai</th>
                             </tr>

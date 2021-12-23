@@ -17,16 +17,16 @@
                     <form action="/students" method="post" enctype="multipart/form-data"> 
                         @csrf
                         <div class="form-group">
-                            <label for="nim">NIM</label>
+                            <label for="nim">NIS</label>
                             <input type="text" class="form-control" required="required" name="nim"></br>
                         </div>
                         <div class="form-group">
-                            <label for="name">Name</label>
+                            <label for="name">Nama</label>
                             <input type="text" class="form-control" required="required" name="name"></br>
                         </div>
 
                         <div class="form-group">
-                            <label for="Kelas">Class</label>
+                            <label for="Kelas">Kelas</label>
                             <select class="form-control" name="Kelas">
                             @foreach($kelas as $class)
                             <option value="{{$class->id}}">
@@ -37,16 +37,16 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="department">Department</label>
+                            <label for="department">Jurusan</label>
                             <input type="text" class="form-control" required="required" name="department"></br>
                         </div>
                         <div class="form-group">
-                            <label for="phone_number">Phone Number</label>
+                            <label for="phone_number">Nomor HP</label>
                             <input type="text" class="form-control" required="required" name="phone_number"></br>
                         </div>
 
                         <div class="form-group">
-                            <label for="photo">Profile Photo</label>
+                            <label for="photo">Foto Siswa</label>
                             <input type="file" class="form-control" required="required" name="photo"></br>
                         <div>
 
